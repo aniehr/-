@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>屎山修祀</title>
+  <style>
+    html,body{height:100%;margin:0;background:#0b0b0c;color:#eaeaea;font-family:'Noto Sans SC','PingFang SC',sans-serif}
+    .wrap{height:100%;display:flex;flex-direction:column}
+    header{padding:12px;text-align:center}
+    .frame{flex:1}
+    iframe{width:100%;height:100%;border:0;background:#000}
+  </style>
+  <script>
+    function getSrc(){
+      const p=new URLSearchParams(location.search);return p.get('src')||'https://YOUR-HF-SPACE-URL';
+    }
+    window.addEventListener('DOMContentLoaded',()=>{
+      const f=document.getElementById('app-frame');f.src=getSrc();
+    });
+  </script>
+  </head>
+<body>
+  <div class="wrap">
+    <header>屎山修祀 · Vercel</header>
+    <div class="frame"><iframe id="app-frame" allow="clipboard-write; fullscreen"></iframe></div>
+  </div>
+</body>
+</html>
